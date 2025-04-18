@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>Web-programozás-1 Házi feladat - AJAX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ajax.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="table.html">Táblázat</a></li>
+            <li><a href="html5.html">HTML5</a></li>
+            <li><a href="chartjs.html">ChartJS</a></li>
+            <li class="active"><a href="ajax.html">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <p>Ez a házi feladat a Web-programozás-1 előadás követelményeit teljesíti.</p>
+    </aside>
+    <div id="content">
+        <h2>AJAX - Adatbázis Kezelése</h2>
+
+        <!-- Code beviteli mező -->
+        <div class="demo">
+            <h3>Felhasználói kód</h3>
+            <input type="text" id="userCode" placeholder="Kód (pl. 123AztaXYZ789)">
+        </div>
+
+        <!-- Read szekció -->
+        <div class="demo">
+            <h3>Read - Összes rekord</h3>
+            <button onclick="getAllRecords()">Összes rekord lekérése</button>
+            <div id="recordList"></div>
+            <div id="heightStats"></div>
+        </div>
+
+        <!-- Create szekció -->
+        <div class="demo">
+            <h3>Create - Új rekord</h3>
+            <input type="text" id="createName" placeholder="Név (max 30 karakter)">
+            <input type="text" id="createHeight" placeholder="Magasság (pl. 0.4)">
+            <input type="text" id="createWeight" placeholder="Súly (pl. 6.0)">
+            <button onclick="createRecord()">Létrehozás</button>
+            <p id="createOutput"></p>
+        </div>
+
+        <!-- Update szekció -->
+        <div class="demo">
+            <h3>Update - Rekord módosítása</h3>
+            <input type="text" id="updateId" placeholder="ID">
+            <button onclick="getDataForId()">Adatok lekérése</button>
+            <br>
+            <input type="text" id="updateName" placeholder="Név (max 30 karakter)">
+            <input type="text" id="updateHeight" placeholder="Magasság (pl. 0.4)">
+            <input type="text" id="updateWeight" placeholder="Súly (pl. 6.0)">
+            <button onclick="updateRecord()">Módosítás</button>
+            <p id="updateOutput"></p>
+        </div>
+
+        <!-- Delete szekció -->
+        <div class="demo">
+            <h3>Delete - Rekord törlése</h3>
+            <input type="text" id="deleteId" placeholder="ID">
+            <button onclick="deleteRecord()">Törlés</button>
+            <p id="deleteOutput"></p>
+        </div>
+    </div>
+    <footer>
+        <p>Készítette: Szarvas Attila EEU98E</p>
+    </footer>
+</body>
+</html>
