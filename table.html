@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>Web-programozás-1 Házi feladat - Táblázat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="table.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li class="active"><a href="table.html">Táblázat</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <p>Ez a házi feladat a Web-programozás-1 előadás követelményeit teljesíti.</p>
+    </aside>
+    <div id="content">
+        <h2>Táblázat kezelése</h2>
+        <h3>Új adat hozzáadása</h3>
+        <form id="addForm">
+            <label>Név: <input type="text" id="name" required></label><br>
+            <label>Kor: <input type="number" id="age" required></label><br>
+            <label>Város: <input type="text" id="city" required></label><br>
+            <label>Foglalkozás: <input type="text" id="job" required></label><br>
+            <button type="submit">Hozzáad</button>
+        </form>
+        <h3>Szűrés</h3>
+        <label>Név: <input type="text" id="filterName"></label>
+        <label>Kor: <input type="text" id="filterAge"></label>
+        <label>Város: <input type="text" id="filterCity"></label>
+        <label>Foglalkozás: <input type="text" id="filterJob"></label>
+        <h3>Táblázat</h3>
+        <table id="dataTable" border="1">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Név</th>
+                    <th onclick="sortTable(1)">Kor</th>
+                    <th onclick="sortTable(2)">Város</th>
+                    <th onclick="sortTable(3)">Foglalkozás</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <footer>
+        <p>Készítette: Szarvas Attila EEU98E</p>
+    </footer>
+</body>
+</html>
