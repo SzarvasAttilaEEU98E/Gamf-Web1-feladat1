@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>Web-programozás-1 Házi feladat - HTML5</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="html5.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="table.html">Táblázat</a></li>
+            <li class="active"><a href="html5.html">HTML5</a></li>
+            <li><a href="chartjs.html">ChartJS</a></li>
+            <li><a href="ajax.html">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+
+        </ul>
+    </nav>
+    <aside>
+        <p>Ez a házi feladat a Web-programozás-1 előadás követelményeit teljesíti.</p>
+    </aside>
+    <div id="content">
+        <h2>HTML5 Példák</h2>
+
+        <div class="demo">
+            <h3>Web Storage</h3>
+            <p>Szöveg mentése és visszaolvasása Local Storage-ban.</p>
+            <input type="text" id="storageInput" placeholder="Írj valamit">
+            <button onclick="saveStorage()">Mentés</button>
+            <button onclick="loadStorage()">Betöltés</button>
+            <p id="storageOutput"></p>
+        </div>
+
+        <div class="demo">
+            <h3>Web Workers</h3>
+            <p>Fibonacci számítás háttérben.</p>
+            <button onclick="runWorker()">Számítás indítása</button>
+            <p id="workerOutput"></p>
+        </div>
+
+        <div class="demo">
+            <h3>Server-Sent Events</h3>
+            <p>Szimulált üzenetek megjelenítése.</p>
+            <p id="sseOutput"></p>
+            <button onclick="startSSE()">Üzenetek indítása</button>
+        </div>
+
+        <div class="demo">
+            <h3>Geolocation API</h3>
+            <p>Aktuális pozíció lekérése.</p>
+            <button onclick="getLocation()">Pozíció lekérése</button>
+            <p id="geoOutput"></p>
+            <div id="map" style="height: 300px; margin-top: 10px;"></div>
+        </div>
+
+        <div class="demo">
+            <h3>Drag and Drop API</h3>
+            <p>Húzd a kék dobozt a zöldbe!</p>
+            <div id="dragSource" draggable="true">Húzható</div>
+            <div id="dragTarget">Cél</div>
+            <p id="dragOutput"></p>
+            <button onclick="resetDragAndDrop()">Újrakezdés</button>
+        </div>
+
+        <div class="demo">
+            <h3>Canvas</h3>
+            <p>Egyszerű kör rajzolása.</p>
+            <canvas id="canvasDemo" width="200" height="200"></canvas>
+        </div>
+
+        <div class="demo">
+            <h3>SVG</h3>
+            <p>Egyszerű téglalap.</p>
+            <svg width="200" height="200">
+                <rect x="10" y="10" width="100" height="100" fill="blue" />
+            </svg>
+        </div>
+    </div>
+    <footer>
+        <p>Készítette: Szarvas Attila EEU98E</p>
+    </footer>
+</body>
+</html>
