@@ -138,7 +138,7 @@ function getDataForId() {
     })
         .then(response => response.json())
         .then(data => {
-            const record = data.list.find(r => r.id === id);
+            const record = data.list.find(r => r.id == id);
             if (record) {
                 document.getElementById('updateName').value = record.name;
                 document.getElementById('updateHeight').value = record.height;
